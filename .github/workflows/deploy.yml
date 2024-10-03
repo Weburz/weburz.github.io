@@ -5,11 +5,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
     name: Build the Site
@@ -18,14 +13,28 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.0
 
-      - name: Install & Build the Site
-        uses: withastro/action@v3.0.0
+      - name: Setup the pnpm Package Manager
+        uses: pnpm/action-setup@v4.0.0
         with:
-          package-manager: pnpm
+          version: 9
+
+      - name: Install the Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build the Static Assets
+        run: pnpm build --preset github_pages
+
+      - name: Upload Build Assets
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: ./.output/public
 
   deploy:
     name: Deploy the Site
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     environment:
       name: github-pages
