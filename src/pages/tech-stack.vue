@@ -99,3 +99,9 @@
     </li>
   </ol>
 </template>
+
+<script lang="ts" setup>
+useHead({
+  title: "Technology Stack",
+});
+</script>

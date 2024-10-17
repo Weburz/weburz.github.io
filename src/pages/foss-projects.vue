@@ -10,3 +10,9 @@
     </li>
   </ol>
 </template>
+
+<script lang="ts" setup>
+useHead({
+  title: "FOSS Projects",
+});
+</script>
