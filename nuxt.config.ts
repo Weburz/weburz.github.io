@@ -11,6 +11,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxt/eslint"],
+  modules: ["@nuxt/eslint", "@nuxt/content"],
   compatibilityDate: "2024-07-19",
 });
