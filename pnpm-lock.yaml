@@ -220,10 +220,6 @@ packages:
     resolution: {integrity: sha512-e/zv1co8pp55dNdEcCynfj9X7nyUKUXoUEwfXqaZt0omVOmDe9oOTdKStH4GmAw6zxMFs50ZayuMfHDKlO7Tfw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helpers@7.25.7':
-    resolution: {integrity: sha512-Sv6pASx7Esm38KQpF/U/OXLwPPrdGHNKoeblRxgZRLXnAtnkEe4ptJPDtAZM7fBLadbc1Q07kQpSiGQ0Jg6tRA==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/helpers@7.26.10':
     resolution: {integrity: sha512-UPYc3SauzZ3JGgj87GgZ89JVdC5dj0AoetR5Bw6wj4niittNyFh6+eOGonYvJ1ao6B8lEa3Q3klS7ADZ53bc5g==}
     engines: {node: '>=6.9.0'}
@@ -5095,7 +5091,7 @@ snapshots:
       '@babel/generator': 7.25.7
       '@babel/helper-compilation-targets': 7.25.7
       '@babel/helper-module-transforms': 7.25.7(@babel/core@7.25.7)
-      '@babel/helpers': 7.25.7
+      '@babel/helpers': 7.26.10
       '@babel/parser': 7.25.7
       '@babel/template': 7.25.7
       '@babel/traverse': 7.25.7
@@ -5302,11 +5298,6 @@ snapshots:
   '@babel/helper-validator-option@7.25.7': {}
 
   '@babel/helper-validator-option@7.25.9': {}
-
-  '@babel/helpers@7.25.7':
-    dependencies:
-      '@babel/template': 7.25.7
-      '@babel/types': 7.26.10
 
   '@babel/helpers@7.26.10':
     dependencies:
