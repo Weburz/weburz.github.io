@@ -20,5 +20,6 @@ body {
 
 main {
   min-height: 100vh;
+  padding: 2rem 4rem;
 }
 </style>
