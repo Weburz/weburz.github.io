@@ -14,6 +14,10 @@ useHead({
 </script>
 
 <style lang="scss">
+body {
+  background-color: #090d1f;
+}
+
 main {
   min-height: 100vh;
 }
