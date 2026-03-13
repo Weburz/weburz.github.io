@@ -4477,8 +4477,8 @@ packages:
   unctx@2.4.1:
     resolution: {integrity: sha512-AbaYw0Nm4mK4qjhns67C+kgxR2YWiwlDBPzxrN8h8C6VtAdCgditAY5Dezu3IJy4XVqAnbrXt9oQJvsn3fyozg==}
 
-  undici@7.18.2:
-    resolution: {integrity: sha512-y+8YjDFzWdQlSE9N5nzKMT3g4a5UBX1HKowfdXh0uvAnTaqqwqB92Jt4UXBAeKekDs5IaDKyJFR4X1gYVCgXcw==}
+  undici@7.24.1:
+    resolution: {integrity: sha512-5xoBibbmnjlcR3jdqtY2Lnx7WbrD/tHlT01TmvqZUFVc9Q1w4+j5hbnapTqbcXITMH1ovjq/W7BkqBilHiVAaA==}
     engines: {node: '>=20.18.1'}
 
   unenv@2.0.0-rc.21:
@@ -5599,7 +5599,7 @@ snapshots:
       std-env: 3.10.0
       tinyexec: 1.0.1
       ufo: 1.6.1
-      undici: 7.18.2
+      undici: 7.24.1
       youch: 4.1.0-beta.11
     transitivePeerDependencies:
       - magicast
@@ -10305,7 +10305,7 @@ snapshots:
       magic-string: 0.30.19
       unplugin: 2.3.10
 
-  undici@7.18.2: {}
+  undici@7.24.1: {}
 
   unenv@2.0.0-rc.21:
     dependencies:
