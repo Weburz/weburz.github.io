@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { seo } = useAppConfig();
-const { umamiWebsiteId } = useRuntimeConfig().public;
 
 const { data: navigation } = await useAsyncData("navigation", () =>
   queryCollectionNavigation("openSource"),
@@ -53,18 +52,6 @@ useSeoMeta({
   ogSiteName: seo?.siteName,
   twitterCard: "summary_large_image",
 });
-
-if (umamiWebsiteId) {
-  useHead({
-    script: [
-      {
-        async: true,
-        src: "https://umami.weburz.com/script.js",
-        "data-website-id": umamiWebsiteId,
-      },
-    ],
-  });
-}
 
 provide("navigation", navigation);
 </script>
