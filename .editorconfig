@@ -1,19 +1,30 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
 root = true
 
+# Unix-style newlines with a newline ending every file
 [*]
 end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 
-[*.{js,ts}]
+# Indentation override for all JS under lib directory
+[*.{mts,mjs,js,ts,vue,css,scss,html}]
 indent_style = space
 indent_size = 2
 
-[*.{vue}]
+# Indentation override for all Terraform files
+[*.{tf,tfvars,tfstate}]
 indent_style = space
 indent_size = 2
 
-[*.{json,yml}]
+# Matches the exact files either package.json or .travis.yml
+[*.{json,yml,toml,yaml,md}]
 indent_style = space
 indent_size = 2
 
+# Matches the Dockerfiles for all the services
+[Dockerfile]
+indent_style = space
+indent_size = 4

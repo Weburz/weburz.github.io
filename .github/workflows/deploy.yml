@@ -5,27 +5,43 @@ on:
     branches:
       - main
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
     name: Build the Site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4.2.0
+        uses: actions/checkout@v4
 
-      - name: Setup the pnpm Package Manager
-        uses: pnpm/action-setup@v4.0.0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 10
+          version: 11
 
-      - name: Install the Dependencies
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build the Static Assets
-        run: pnpm build --preset github_pages
+      - name: Generate Static Site
+        run: pnpm run generate
+        env:
+          NUXT_PUBLIC_SITE_URL: https://tech.weburz.com
+          NUXT_PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
 
-      - name: Upload Build Assets
-        uses: actions/upload-pages-artifact@v3.0.1
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./.output/public
 
@@ -42,4 +58,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.5
+        uses: actions/deploy-pages@v4

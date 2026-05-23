@@ -1,4 +1,8 @@
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - vue-demi
+allowBuilds:
+  "@parcel/watcher": true
+  "@takumi-rs/core": true
+  "@tailwindcss/oxide": true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true

@@ -1,0 +1,17 @@
+.git
+.github
+.nuxt
+.output
+.data
+.cache
+.task
+node_modules
+dist
+.env
+.env.*
+*.log
+README.md
+CONTRIBUTING.md
+LICENSE
+Taskfile.yml
+.pre-commit-config.yaml
