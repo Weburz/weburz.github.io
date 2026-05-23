@@ -14,7 +14,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.108",
+    "@iconify-json/lucide": "^1.2.109",
     "@iconify-json/simple-icons": "^1.2.83",
     "@nuxt/content": "^3.14.0",
     "@nuxt/image": "^2.0.0",
